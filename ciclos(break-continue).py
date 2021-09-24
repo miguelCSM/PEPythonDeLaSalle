@@ -41,11 +41,30 @@ for i in range(6):
         continue
     print(f'Valor: {i}')
     
+
+#%%
+agregar = "no"
+usuarios =[]# nombres
+edades = [] # edades
+estados = [] # mayor o menor
+
+agregar = input("Desea agregar un usuario nuevo? Responda si o no")
+
+while(agregar == "si"):
+    nombre = input("Cual es el nombre?")
+    usuarios.append(nombre)
+    edad = int(input("Cual es la edad?"))
+    edades.append(edad)
+    if (edad >=18):
+        print("Mayor")
+        estados.append("Mayor")
+    else: 
+        print("Menor")
+        estados.append("Menor")
+    agregar = input("Desea agregar otro usuario nuevo? Responda si o no")    
     
 
-
-
-
+# Imprimir cada uno de los usuario con sus edad y estados correspondientes
 
 
 
