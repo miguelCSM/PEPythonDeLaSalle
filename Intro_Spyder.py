@@ -20,7 +20,5 @@ while (password != passConfirm):
         print("Contacte con el centro de computo para restaurar contraseña")
         break#Rompe cualquier tipo de ciclo
         
-
 if (errores<3):
     print("Se ha dado de alta exitosamente con ", errores,"errores")    
-        
