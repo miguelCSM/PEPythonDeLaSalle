@@ -41,6 +41,32 @@ cliente = ["Maribel", "Daniela", "Isabella", "Hayde"]
 edad = [18,18,18,18]
 direccion = ["Campestre", "Cañada", "G. Jardín", "R. NAranjos"]
 
+for i in range(len(cliente)):
+    print(f'Cliente : {cliente[i]} Direccion : {direccion[i]} Edad: {edad[i]}')
+
+#%% En una lista vacía guarda las calificaciones de un alumno, indicando el numero calif
+calificaciones = []
+promedio = 0
+
+nCalif = int(input("Cuantas calificaciones desea guardar?\n"))
+
+for i in range(nCalif):
+    print(f'Calificacion {i}')
+    calif = float(input())
+    calificaciones.append(calif)
+    promedio += calif
+    
+promedio = promedio/nCalif
+print(calificaciones, " y su promedio = ", promedio)
+
+
+
+
+
+
+
+
+
 
 
 
