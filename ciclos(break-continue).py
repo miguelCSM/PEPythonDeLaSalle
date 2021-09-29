@@ -66,8 +66,8 @@ while(agregar == "si"):
 
 # Imprimir cada uno de los usuario con sus edad y estados correspondientes
 
-
-
+for i in range(len(usuarios)):
+    print(f'Usuario: {usuarios[i]} y su edad {edades[i]} y es {estados[i]}')
 
 
 
