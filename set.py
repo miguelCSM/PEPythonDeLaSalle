@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+    # -*- coding: utf-8 -*-
 """
 Conjuntos declarados por {}
 """
@@ -23,7 +23,7 @@ planetas.add('Marte')
 planetas.remove('Tierra')
 
 # Eliminar 
-planetas.discard('Jupiter')
+"""planetas.discard('Jupiter')
 print(planetas)
 
 #limpiar el set
@@ -31,3 +31,4 @@ planetas.clear()
 
 #eliminar el set
 del planetas
+"""
