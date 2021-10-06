@@ -31,8 +31,28 @@ def area(tipoFigura):
     #Cuadrado
     if(tipoFigura==1):
         tipo = "Cuadrado"
-        lado = float(input("Ingrese el valor de un lado para calcular el area del cuadrado"))
+        lado = float(input("Lado"))
         Area = lado*lado
         print("El area del ",tipo, "es igual a:",Area)
         return Area
+    # Triangulo
+    if(tipoFigura==2):
+        tipo = "Triangulo"
+        base = float(input("Base:"))
+        altura = float(input("Altura"))
+        Area = (base*altura/2)
+        print("El area del", tipo, "es igual a", Area)
+        return Area
+    # Circulo
+    if(tipoFigura==3):
+        tipo = "Circulo"
+        radio = float(input("Radio:"))
+        import math as mt
+        Area = 3.1416 * mt.pow(radio, 2)
+        print("El area del",tipo,"es igual a", area)
+        return Area
+    
+resultado = area(3)
+
+        
     
