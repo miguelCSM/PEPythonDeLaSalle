@@ -49,10 +49,12 @@ def area(tipoFigura):
         radio = float(input("Radio:"))
         import math as mt
         Area = 3.1416 * mt.pow(radio, 2)
-        print("El area del",tipo,"es igual a", area)
+        print("El area del",tipo,"es igual a", Area)
         return Area
     
 resultado = area(3)
 
-        
-    
+# Diseñar una función que reciba como parametro un numero
+# e imprimar la tabla correspondiente del 1 al 10
+def tabla(numero):
+    # Instrucciones
