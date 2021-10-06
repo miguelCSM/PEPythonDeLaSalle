@@ -20,6 +20,12 @@ while (score1<=35 or score2<=35):
     if(score1 in s):
         score1 = s[score1]
     print(score1)
+    if (score1>=36):
+        print("Usted ha ganado su puntuación es:",score1)
+        break
+    # Tendrían que agregar una condición extra donde consideren el score
+    # cuando es mayor de 36, 
+        
     #Jugador 2
     print("Jugador 2")
     dado1 = rd.randint(1, 6)    
@@ -30,3 +36,6 @@ while (score1<=35 or score2<=35):
     if(score2 in s):
         score2 = s[score2]
     print(score2)
+    if (score1>=36):
+        print("Usted ha ganado su puntuación es:",score2)
+        break
