@@ -52,9 +52,16 @@ def area(tipoFigura):
         print("El area del",tipo,"es igual a", Area)
         return Area
     
-resultado = area(3)
+#resultado = area(3)
 
 # Diseñar una función que reciba como parametro un numero
 # e imprimar la tabla correspondiente del 1 al 10
 def tabla(numero):
     # Instrucciones
+    for i in range(1,11):
+        print(numero,"X",i,"=",i*numero)
+        
+# Diseñar un funcion que reciba como parametros
+# a,b y c para calcular las raices de una ecuación cuadrática
+def chicharronero(a,b,c):
+    
