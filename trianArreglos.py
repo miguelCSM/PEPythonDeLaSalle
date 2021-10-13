@@ -18,6 +18,7 @@ Created on Wed Oct 13 07:41:52 2021
 import numpy as np
 nTriangulos = int(input("Cuantos triángulos desea almacenar?"))
 nLados = 3
+tipos = []
 
 matriz = np.zeros([nTriangulos,nLados])
 
@@ -25,4 +26,11 @@ for i in range(0,nTriangulos):
     for j in range(0,nLados):
         print("Triangulo" , i+1, "lado", j+1)
         matriz[i,j] = int(input())
-        
+
+for i in range(0,nTriangulos):
+    if(matriz[i,0] == matriz[i,1] and matriz[i,0] == matriz[i,2]):
+        tipos.append("Equilatero")
+    if (matriz[i,0]==matriz[i,1] or matriz[i,1]==matriz[i,2] or matriz[i,0]== matriz[i,2]):
+        tipos.append("Isosceles")
+    else:
+        tipos.append("Escaleno")
