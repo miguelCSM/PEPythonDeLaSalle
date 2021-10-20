@@ -40,11 +40,14 @@ elif (metodo == 2):
             matriz[i,j] = int(input())
         suma = matriz[i,:].sum()
         
-        if (suma != 180):
+        #if (suma != 180):
+        while(suma!= 180):
+            suma = 0
             for j in range(0,nLados):
                 print("Tienes que repetir la captura del tringulo")
                 print("Triangulo" , i+1, "Ángulo", j+1)
                 matriz[i,j] = int(input())
+                
             
             
     for i in range(0,nTriangulos):
