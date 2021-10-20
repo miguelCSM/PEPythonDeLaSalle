@@ -21,6 +21,17 @@ while(continua == "si" or continua == "SI" or continua == "Si" or continua == "s
     for i in range(len(dias)):
         print("Ingrese temperatura del día", dias[i])
         temp[i] = input()
+        if (i>0):
+            diferencia = abs(temp[i-1]-temp[i])
+            while(diferencia >=10):
+                print("Es valida la temperatura actual de ", temp[i],"?")
+                continua = input("Si o no")
+                if (continua== "no"):
+                    print("Ingrese nuevamente la temperatura del día", dias[i])
+                    temp[i] = input()
+                    diferencia = abs(temp[i-1]-temp[i])   
+                else:
+                    break
         
     for i in range(len(dias)):
         if(temp[i]<23):
