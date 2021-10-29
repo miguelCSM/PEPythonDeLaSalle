@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-
 from tkinter import *
 
 window =  Tk()
 
+# objeto de tipo funcion que manda llamar propiedades
 window.title("Hello")
 window.geometry("350x200")
 
