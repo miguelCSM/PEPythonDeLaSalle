@@ -19,15 +19,26 @@ num1.place(x=0,y=30)
 num2 = Entry(window)
 num2.place(x=250,y=30)
 
-def clicked():
-    res = int(num1.get()) - int(num2.get())
+def sumar():
+    res = int(num1.get()) + int(num2.get())
     lbl3.configure(text=res)
+
+def restar():
+    res = int(num1.get()) - int(num2.get())
+    lbl4.configure(text = res)
+    
     
 lbl3 = Label(window)
 lbl3.place(x=0, y=90)
-    
-btn = Button(window,text="Sumar", command = clicked)
 
-btn.place(x=0,y=120)
+lbl4 = Label(window)
+lbl4.place(x=250, y=90)
+    
+btnSumar = Button(window,text="Sumar", command = sumar)
+btnSumar.place(x=0,y=120)
+
+btnRestar = Button(window,text="Restar", command= restar)
+btnRestar.place(x =250, y = 120)
+
 window.geometry("500x250")
 window.mainloop()   
