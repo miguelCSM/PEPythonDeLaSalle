@@ -29,12 +29,22 @@ resultado = Label(window, text= "Resultado")
 resultado.place(x = 250, y = 60)
 
 
+
 def calcular():    
-    resultado.configure(text="res")
+    prueba = float(ladoC.get())/float(ladoA.get())
+    print(prueba)
+    if(ladoA.get() == ladoB.get() and ladoB.get()==ladoC.get()):
+        res = "Equilatero"
+    elif(ladoA.get() == ladoB.get() or ladoB.get() == ladoC.get() or ladoA.get() == ladoC.get()):
+        res = "Isosceles"
+    else:
+        res = "Escaleno"
+    resultado.configure(text=res)
     
 btn = Button(window, text= "calcular", command = calcular)
 btn.place(x = 125, y = 60)
 
 
 window.geometry("500x250")
-window.mainloop()   
+window.mainloop()  # Permite ejecutar indefinidamente el programa
+  
