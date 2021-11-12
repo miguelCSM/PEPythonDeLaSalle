@@ -13,10 +13,42 @@ p_cant = [10,15,5,2,100]
 mensaje = ""
 
 def buscar():
-    indBuscado = id_prod.index(idB.get())
-    mensaje = indBuscado
-    print(mensaje)
-    lblMensaje.configure(text = mensaje)    
+    indBuscado = (idB.get())
+    if indBuscado in id_prod:
+        iB = id_prod.index(indBuscado)
+        mensaje = "El producto si existe"
+        print(mensaje)
+        lblMensaje.configure(text = mensaje)
+        
+        lblDescrip = Label(window, text="")
+        lblDescrip.place(x = 0,y=80)
+        lblDescrip.configure(text = d_prod[iB])
+        
+        lblPrecio = Label(window, text  = "")
+        lblPrecio.place(x=0,y=100)
+        lblPrecio.configure(text = p_prod[iB])
+        
+        lblCantidad = Label(window, text  = "")
+        lblCantidad.place(x=0,y=120)
+        lblCantidad.configure(text = p_cant[iB])
+        
+        elementsCompra()
+        
+    else:
+        mensaje = "No Existe el Producto"
+        lblMensaje.configure(text = mensaje) 
+        
+def elementsCompra():    
+    lblpiezas = Label(window, text= "Piezas")
+    lblpiezas.place(x = 150,y=160)
+    
+    cantCompra = Entry(window)
+    cantCompra.place(x = 150, y = 180)
+    
+    comprarbtn = Button(window, text= "Comprar")
+    comprarbtn.place(x = 150,y = 200)
+    
+print(iB)
 
 window = Tk()
 
@@ -31,7 +63,7 @@ idB = Entry(window)
 idB.place(x=0,y=20)
 
 lblMensaje = Label(window, text= "")
-lblMensaje.place(x=0, y=100)
+lblMensaje.place(x=0, y=60)
 
 btnAdd = Button(window, text= "Buscar", command = buscar)
 btnAdd.place(x = 0, y = 40)
