@@ -10,11 +10,14 @@ d_prod = ["Tenis", "Sandalias", "Zapatilla","Tachones","Pantunflas"]
 p_prod = [100.0, 20.0, 30.0,200.0,10.0]
 p_cant = [10,15,5,2,100]
 
+iB = 0
+
 mensaje = ""
 
 def buscar():
     indBuscado = (idB.get())
     if indBuscado in id_prod:
+        global iB
         iB = id_prod.index(indBuscado)
         mensaje = "El producto si existe"
         print(mensaje)
@@ -38,15 +41,35 @@ def buscar():
         mensaje = "No Existe el Producto"
         lblMensaje.configure(text = mensaje) 
         
-def elementsCompra():    
+def elementsCompra():   
+    def comprar():
+        print("Estás comprando")
+        piezasCompradas = int(cantCompra.get())
+        piezasInv = p_cant[iB];
+        
+        if piezasCompradas > piezasInv:
+            print("No hay producto suficiente")
+        else:
+            nuevaCantidad = piezasInv - piezasCompradas
+            p_cant[iB] = nuevaCantidad
+            lblCantidad = Label(window, text  = "")
+            lblCantidad.place(x=0,y=120)
+            lblCantidad.configure(text = p_cant[iB])
+            if nuevaCantidad == 0:
+                lblCantidad.configure(text = "NO DISPONIBLE")
+        
+    cantCompra = 0
     lblpiezas = Label(window, text= "Piezas")
     lblpiezas.place(x = 150,y=160)
     
     cantCompra = Entry(window)
     cantCompra.place(x = 150, y = 180)
     
-    comprarbtn = Button(window, text= "Comprar")
+    comprarbtn = Button(window, text= "Comprar", command= comprar)
     comprarbtn.place(x = 150,y = 200)
+    
+
+        
     
 print(iB)
 
